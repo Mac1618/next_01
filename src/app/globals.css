@@ -2,26 +2,178 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background: #fff;
+}
+
+
+/* Home Component */
+.home-component{
+    height: 100%;
+    width: 100%;
+    color: #fff;
+    /* The image used */
+    background-image: url("https://www.thesprucepets.com/thmb/-q-V9OLV1LyJrWHhjXjjvg-fhKc=/7698x0/filters:no_upscale():strip_icc()/facts-about-black-cats-554102-hero-7281a22d75584d448290c359780c2ead.jpg");
+
+    /* Full height */
+    height: 100%;
+  
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.form-component form h1{
+  margin-bottom: 20px;
+}
+
+.form-component{
+  /* From https://css.glass */
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.form-component label{
+  color: #fff;
+}
+
+
+/* Flowers Component */
+.flowers-component{
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flowers-component .seven{
+  width: 100%;
+  height: 100%;
+}
+
+.seven h1 {
+  text-align: center;
+  font-size:30px; 
+  font-weight:300; 
+  color:#222; 
+  letter-spacing:1px;
+  text-transform: uppercase;
+
+  display: grid;
+  grid-template-columns: 1fr max-content 1fr;
+  grid-template-rows: 27px 0;
+  grid-gap: 20px;
+  align-items: center;
+  }
+  
+.seven h1:after,.seven h1:before {
+  content: " ";
+  display: block;
+  border-bottom: 1px solid #c50000;
+  border-top: 1px solid #c50000;
+  height: 5px;
+  background-color:#f8f8f8;
+}
+
+
+/* Random button */
+.flowers-component .random-btn{
+  width: 100%;
+  padding: 20% 0;
+  margin-bottom: 5px;
+  text-align: center;
+
+  outline: 0;
+  grid-gap: 8px;
+  align-items: center;
+  background: 0 0;
+  color: rgb(43, 108, 176);
+  border: 1px solid rgb(66, 153, 225);
+  border-radius: 4px;
+  cursor: pointer;
+  display: inline-flex;
+  flex-shrink: 0;
+  font-size: 16px;
+  gap: 8px;
+  justify-content: center;
+  line-height: 1.5;
+  overflow: hidden;
+  padding: 12px 16px;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  transition: all .14s ease-out;
+  white-space: nowrap;
+}
+.flowers-component .random-btn:hover {
+  box-shadow: 4px 4px 0 rgb(43, 108, 176);
+  font-weight: bold;
+  background-color: rgba(43, 107, 176, 0.145);
+  transform: translate(-4px,-4px);
+}
+.flowers-component .random-btn:focus-visible{
+  outline-offset: 1px;
+}
+
+/* Number buttons */
+.flowers-component .btns{
+  display: flex;
+  justify-content: space-between;
+}
+
+.flowers-component .btns button {
+  margin: 1px 2px ;
+  outline: 0;
+  grid-gap: 8px;
+  align-items: center;
+  background: 0 0;
+  color: rgb(43, 108, 176);
+  border: 1px solid rgb(66, 153, 225);
+  border-radius: 4px;
+  cursor: pointer;
+  display: inline-flex;
+  flex-shrink: 0;
+  font-size: 16px;
+  gap: 8px;
+  justify-content: center;
+  line-height: 1.5;
+  overflow: hidden;
+  padding: 12px 16px;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  transition: all .14s ease-out;
+  white-space: nowrap;
+}
+.flowers-component .btns button:hover {
+  box-shadow: 4px 4px 0 rgb(43, 108, 176);
+  font-weight: bold;
+  background-color: rgba(43, 107, 176, 0.145);
+  transform: translate(-4px,-4px);
+}
+.flowers-component .btns button:focus-visible{
+  outline-offset: 1px;
+}
+
+
+/* Image */
+.hbty-img{
+  width: 250px;
+}
+
+
+/* Flower Image Component */
+.flower-image-component{
+  height: 100vh;
+  width: 100%;
+  background-color: #000;
+
+  display: flex;
+  justify-content: center;
+  align-self: center;
 }
